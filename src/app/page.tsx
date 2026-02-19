@@ -443,7 +443,7 @@ const ISAProductPage = ({ onBack }: { onBack: () => void }) => {
       <StickyTabs tabs={tabs} active={activeTab} onClick={scrollToSection} top={56} />
 
       <div style={{ paddingBottom: 60 }}>
-        <div ref={(el) => (sectionRefs.current[0] = el)} className="section" style={{ scrollMarginTop: 104 }}>
+        <div ref={(el) => { sectionRefs.current[0] = el; }} className="section" style={{ scrollMarginTop: 104 }}>
           <div className="section-title">기본 정보</div>
           <div className="card">
             <InfoRow label="투자 알고리즘" value="배당 성장 퀀트 전략" />
@@ -461,7 +461,7 @@ const ISAProductPage = ({ onBack }: { onBack: () => void }) => {
           </button>
         </div>
 
-        <div ref={(el) => (sectionRefs.current[1] = el)} className="section" style={{ scrollMarginTop: 104 }}>
+        <div ref={(el) => { sectionRefs.current[1] = el; }} className="section" style={{ scrollMarginTop: 104 }}>
           <div className="section-title">상품 안내</div>
           <div className="card">
             <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 12, color: "var(--gray-800)" }}>서비스 개요</div>
@@ -506,7 +506,7 @@ const ISAProductPage = ({ onBack }: { onBack: () => void }) => {
           </div>
         </div>
 
-        <div ref={(el) => (sectionRefs.current[2] = el)} className="section" style={{ scrollMarginTop: 104 }}>
+        <div ref={(el) => { sectionRefs.current[2] = el; }} className="section" style={{ scrollMarginTop: 104 }}>
           <div className="section-title">투자 자산</div>
 
           <div className="card">
@@ -537,7 +537,7 @@ const ISAProductPage = ({ onBack }: { onBack: () => void }) => {
           </div>
         </div>
 
-        <div ref={(el) => (sectionRefs.current[3] = el)} className="section" style={{ scrollMarginTop: 104 }}>
+        <div ref={(el) => { sectionRefs.current[3] = el; }} className="section" style={{ scrollMarginTop: 104 }}>
           <div className="section-title">모의 계산기</div>
           <CalculatorSection />
         </div>
@@ -866,12 +866,12 @@ const AssetPage = ({ onBack }: { onBack: () => void }) => {
       <StickyTabs tabs={tabs} active={activeTab} onClick={scrollToSection} top={56} />
 
       <div style={{ padding: "0 0 60px" }}>
-        <div ref={(el) => (sectionRefs.current[0] = el)} className="section" style={{ scrollMarginTop: 112 }}>
+        <div ref={(el) => { sectionRefs.current[0] = el; }} className="section" style={{ scrollMarginTop: 112 }}>
           <div className="section-title">가입 정보</div>
           <SubscriptionInfoSection />
         </div>
 
-        <div ref={(el) => (sectionRefs.current[1] = el)} className="section" style={{ scrollMarginTop: 112 }}>
+        <div ref={(el) => { sectionRefs.current[1] = el; }} className="section" style={{ scrollMarginTop: 112 }}>
           <div className="section-title">세금 상세내역</div>
           <TaxDetailSection
             accountType={ASSET_SUMMARY.accountType}
@@ -880,7 +880,7 @@ const AssetPage = ({ onBack }: { onBack: () => void }) => {
           />
         </div>
 
-        <div ref={(el) => (sectionRefs.current[2] = el)} className="section" style={{ scrollMarginTop: 112 }}>
+        <div ref={(el) => { sectionRefs.current[2] = el; }} className="section" style={{ scrollMarginTop: 112 }}>
           <div className="section-title">중도해지 예상조회</div>
           <EarlyTerminationSection />
         </div>
